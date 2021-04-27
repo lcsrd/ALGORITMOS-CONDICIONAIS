@@ -1,24 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <locale.h>
 
+    int main() {
+    setlocale(LC_ALL,"portuguese");
+    char nome;
+    int sexo, estadoc, tempodecasada;
+	
+    printf("Nome: ");
+    scanf("%s", &nome);
+	
+    printf("Sexo: Masculino (1) ou Feminino (2)");
+    scanf("%i", &sexo);
 
-int main (void) {
-	char nome [50];
-	char sexo, estadocivil;
-	int anos;
+    printf("Estado Civil: Solteira (1) ou Casada (2)");
+    scanf("%i", &estadoc);
 	
-	printf("Nome: ");
-	scanf("%s", &nome);
-	printf("Sexo (M: Masculino, F: Feminino )");
-	scanf("%s", &sexo);
-	printf("Estado civil (C: Casado(a), S: solteiro(a): )");
-	scanf("%s", &estadocivil);
-	
-	if(sexo == 'F' && estadocivil == 'C')
-	{
-		printf("Tempo de casamento em anos: ");
-		scanf("%d", &anos);
-	}
-	
-	return 0;
+    if(sexo == 2 && estadoc == 2){
+
+    printf("Informe seu tempo de casada em anos:");
+    scanf("%i", &tempodecasada);
+
+    }
+
+return 0;	    
 }
